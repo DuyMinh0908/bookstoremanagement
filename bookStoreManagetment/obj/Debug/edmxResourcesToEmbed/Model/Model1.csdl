@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bookStoreManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="idAccount" />
+    </Key>
+    <Property Name="idAccount" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nameAccount" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="passwordAccount" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="typeAccount" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="billCode" />
+    </Key>
+    <Property Name="billCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="billType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bookInformation">
+    <Key>
+      <PropertyRef Name="sttInformation" />
+    </Key>
+    <Property Name="sttInformation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBook" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="typeContent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="typeMaterial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="numberOfPages" Type="Int32" />
+    <Property Name="author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="translator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NXB" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="NPH" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="checkItem">
+    <Key>
+      <PropertyRef Name="sttCheckItems" />
+    </Key>
+    <Property Name="sttCheckItems" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCheckItems" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateCheckItems" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="newQuantityItem" Type="Int32" />
+    <Property Name="oldQuantityItem" Type="Int32" />
+  </EntityType>
+  <EntityType Name="custommer">
+    <Key>
+      <PropertyRef Name="sttCustommer" />
+    </Key>
+    <Property Name="sttCustommer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCustommer" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="custommerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="custommerEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="citizenIdentification" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="nameAccount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="accumulatedPoints" Type="Int32" />
+    <Property Name="custommerNote" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="sttEmployee" />
+    </Key>
+    <Property Name="sttEmployee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employeeType" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employeeAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employeeEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="citizenIdentification" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="nameAccount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employeeSalary" Type="Int32" />
+    <Property Name="employeeNote" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="employeeImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="importBill">
+    <Key>
+      <PropertyRef Name="sttImport" />
+    </Key>
+    <Property Name="sttImport" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="billCodeImport" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="importDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="unitPrice" Type="Int32" Nullable="false" />
+    <Property Name="note" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="paymentMethod" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idsupplier" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="idItem" />
+    </Key>
+    <Property Name="idItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="linkItem" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="imageItem" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameItem" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="importPriceItem" Type="Int32" Nullable="false" />
+    <Property Name="sellPriceItem" Type="Int32" Nullable="false" />
+    <Property Name="descriptionItem" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="barcode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="typeItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="supplierItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="khachtrahang">
+    <Key>
+      <PropertyRef Name="idTrahang" />
+    </Key>
+    <Property Name="idTrahang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="billCodeTra" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="billCodeSell" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameEmployee" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="sellDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idCustomer" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="unitPrice" Type="Int32" Nullable="false" />
+    <Property Name="discount" Type="Int32" Nullable="false" />
+    <Property Name="lido" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="trangthai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameCustomer" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mail">
+    <Key>
+      <PropertyRef Name="idMail" />
+    </Key>
+    <Property Name="idMail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeMail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="updateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="subjectMail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="content" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="descriptionMailType" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="statusMail" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sender" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="autosentDate" Type="DateTime" Precision="0" />
+    <Property Name="typesent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="profitSummary">
+    <Key>
+      <PropertyRef Name="sttPayHistory" />
+    </Key>
+    <Property Name="sttPayHistory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="billCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="billType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rootPrice" Type="Int32" Nullable="false" />
+    <Property Name="payPrice" Type="Int32" Nullable="false" />
+    <Property Name="exchangePrice" Type="Int32" Nullable="false" />
+    <Property Name="idCustomer" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="idEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="day" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nameCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameEmployee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="typeGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="payment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nameBill" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="budget" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sellBill">
+    <Key>
+      <PropertyRef Name="sttSell" />
+    </Key>
+    <Property Name="sttSell" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="billCodeSell" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="idCustomer" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="billstatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sellDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="deliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="licenseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idItem" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="unitPrice" Type="Int32" Nullable="false" />
+    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="discount" Type="Int32" Nullable="false" />
+    <Property Name="note" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tag" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="deliveryMethod" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="paymentMethod" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sentmail">
+    <Key>
+      <PropertyRef Name="idSent" />
+    </Key>
+    <Property Name="idSent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMail" Type="Int32" Nullable="false" />
+    <Property Name="receiverMail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mailStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateSent" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="sender" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="subjectMail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="typeMail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="setting">
+    <Key>
+      <PropertyRef Name="idSetting" />
+    </Key>
+    <Property Name="sttSetting" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idSetting" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameSetting" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="statusSetting" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="contentSetting" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="createdateSetting" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idEmployee" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="studytoolsInformation">
+    <Key>
+      <PropertyRef Name="sttInformation" />
+    </Key>
+    <Property Name="sttInformation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idStudyTool" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="origin" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="distributor" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="typecontent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="idSupplier" />
+    </Key>
+    <Property Name="idSupplier" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nameSupplier" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="addressSupplier" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="emailSupplier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phoneNumberSupplier" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="statusSupplier" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="website" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="masothue" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="bookStoreManagementEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="bills" EntityType="Self.bill" />
+    <EntitySet Name="bookInformations" EntityType="Self.bookInformation" />
+    <EntitySet Name="checkItems" EntityType="Self.checkItem" />
+    <EntitySet Name="custommers" EntityType="Self.custommer" />
+    <EntitySet Name="employees" EntityType="Self.employee" />
+    <EntitySet Name="importBills" EntityType="Self.importBill" />
+    <EntitySet Name="items" EntityType="Self.item" />
+    <EntitySet Name="khachtrahangs" EntityType="Self.khachtrahang" />
+    <EntitySet Name="mails" EntityType="Self.mail" />
+    <EntitySet Name="profitSummaries" EntityType="Self.profitSummary" />
+    <EntitySet Name="sellBills" EntityType="Self.sellBill" />
+    <EntitySet Name="sentmails" EntityType="Self.sentmail" />
+    <EntitySet Name="settings" EntityType="Self.setting" />
+    <EntitySet Name="studytoolsInformations" EntityType="Self.studytoolsInformation" />
+    <EntitySet Name="suppliers" EntityType="Self.supplier" />
+  </EntityContainer>
+</Schema>

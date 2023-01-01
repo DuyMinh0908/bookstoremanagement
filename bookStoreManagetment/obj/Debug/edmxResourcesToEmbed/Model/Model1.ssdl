@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bookStoreManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="idAccount" />
+    </Key>
+    <Property Name="idAccount" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nameAccount" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="passwordAccount" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="typeAccount" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="billCode" />
+    </Key>
+    <Property Name="billCode" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="billType" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bookInformation">
+    <Key>
+      <PropertyRef Name="sttInformation" />
+    </Key>
+    <Property Name="sttInformation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idBook" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="typeContent" Type="nvarchar" MaxLength="50" />
+    <Property Name="typeMaterial" Type="nvarchar" MaxLength="50" />
+    <Property Name="size" Type="nvarchar" MaxLength="50" />
+    <Property Name="numberOfPages" Type="int" />
+    <Property Name="author" Type="nvarchar" MaxLength="100" />
+    <Property Name="translator" Type="nvarchar" MaxLength="100" />
+    <Property Name="NXB" Type="nvarchar" MaxLength="300" />
+    <Property Name="NPH" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="checkItems">
+    <Key>
+      <PropertyRef Name="sttCheckItems" />
+    </Key>
+    <Property Name="sttCheckItems" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCheckItems" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="idEmployee" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateCheckItems" Type="datetime" Nullable="false" />
+    <Property Name="idItem" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="note" Type="nvarchar(max)" />
+    <Property Name="newQuantityItem" Type="int" />
+    <Property Name="oldQuantityItem" Type="int" />
+  </EntityType>
+  <EntityType Name="custommer">
+    <Key>
+      <PropertyRef Name="sttCustommer" />
+    </Key>
+    <Property Name="sttCustommer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCustommer" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="custommerAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="custommerEmail" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="citizenIdentification" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateOfBirth" Type="date" Nullable="false" />
+    <Property Name="nameAccount" Type="nvarchar" MaxLength="20" />
+    <Property Name="accumulatedPoints" Type="int" />
+    <Property Name="custommerNote" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="sttEmployee" />
+    </Key>
+    <Property Name="sttEmployee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmployee" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="employeeType" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="employeeAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="employeeEmail" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="citizenIdentification" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateOfBirth" Type="date" Nullable="false" />
+    <Property Name="nameAccount" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="employeeSalary" Type="int" />
+    <Property Name="employeeNote" Type="nvarchar" MaxLength="200" />
+    <Property Name="employeeImagePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="importBill">
+    <Key>
+      <PropertyRef Name="sttImport" />
+    </Key>
+    <Property Name="sttImport" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="billCodeImport" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="idEmployee" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="nameEmployee" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="importDate" Type="datetime" Nullable="false" />
+    <Property Name="idItem" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="unitPrice" Type="int" Nullable="false" />
+    <Property Name="note" Type="nvarchar" MaxLength="20" />
+    <Property Name="paymentMethod" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="idsupplier" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="idItem" />
+    </Key>
+    <Property Name="idItem" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="linkItem" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="imageItem" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="nameItem" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="importPriceItem" Type="int" Nullable="false" />
+    <Property Name="sellPriceItem" Type="int" Nullable="false" />
+    <Property Name="descriptionItem" Type="nvarchar" MaxLength="2000" />
+    <Property Name="barcode" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="typeItem" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="supplierItem" Type="nvarchar" MaxLength="10" />
+    <Property Name="unit" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="khachtrahang">
+    <Key>
+      <PropertyRef Name="idTrahang" />
+    </Key>
+    <Property Name="idTrahang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="billCodeTra" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="billCodeSell" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="nameEmployee" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="sellDate" Type="datetime" Nullable="false" />
+    <Property Name="idCustomer" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="idItem" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="unitPrice" Type="int" Nullable="false" />
+    <Property Name="discount" Type="int" Nullable="false" />
+    <Property Name="lido" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="trangthai" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="nameCustomer" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="unit" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="mail">
+    <Key>
+      <PropertyRef Name="idMail" />
+    </Key>
+    <Property Name="idMail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="typeMail" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="updateDate" Type="date" Nullable="false" />
+    <Property Name="subjectMail" Type="nvarchar" MaxLength="500" />
+    <Property Name="content" Type="nvarchar" MaxLength="2000" />
+    <Property Name="descriptionMailType" Type="nvarchar" MaxLength="1000" />
+    <Property Name="statusMail" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="sender" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="autosentDate" Type="date" />
+    <Property Name="typesent" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="profitSummary">
+    <Key>
+      <PropertyRef Name="sttPayHistory" />
+    </Key>
+    <Property Name="sttPayHistory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="billCode" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="billType" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="rootPrice" Type="int" Nullable="false" />
+    <Property Name="payPrice" Type="int" Nullable="false" />
+    <Property Name="exchangePrice" Type="int" Nullable="false" />
+    <Property Name="idCustomer" Type="nvarchar" MaxLength="30" />
+    <Property Name="idEmployee" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="day" Type="datetime" Nullable="false" />
+    <Property Name="nameCustomer" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nameEmployee" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="typeGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment" Type="nvarchar" MaxLength="50" />
+    <Property Name="nameBill" Type="nchar" MaxLength="10" />
+    <Property Name="note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="budget" Type="int" />
+  </EntityType>
+  <EntityType Name="sellBill">
+    <Key>
+      <PropertyRef Name="sttSell" />
+    </Key>
+    <Property Name="sttSell" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="billCodeSell" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="idEmployee" Type="nvarchar" MaxLength="30" />
+    <Property Name="idCustomer" Type="nvarchar" MaxLength="30" />
+    <Property Name="billstatus" Type="nvarchar" MaxLength="30" />
+    <Property Name="sellDate" Type="datetime" Nullable="false" />
+    <Property Name="deliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="licenseDate" Type="datetime" Nullable="false" />
+    <Property Name="idItem" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="unitPrice" Type="int" Nullable="false" />
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="discount" Type="int" Nullable="false" />
+    <Property Name="note" Type="nvarchar" MaxLength="20" />
+    <Property Name="tag" Type="nvarchar" MaxLength="20" />
+    <Property Name="deliveryMethod" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="paymentMethod" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sentmail">
+    <Key>
+      <PropertyRef Name="idSent" />
+    </Key>
+    <Property Name="idSent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMail" Type="int" Nullable="false" />
+    <Property Name="receiverMail" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="mailStatus" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateSent" Type="date" Nullable="false" />
+    <Property Name="sender" Type="nvarchar" MaxLength="30" />
+    <Property Name="subjectMail" Type="nvarchar" MaxLength="500" />
+    <Property Name="typeMail" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="setting">
+    <Key>
+      <PropertyRef Name="idSetting" />
+    </Key>
+    <Property Name="sttSetting" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idSetting" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nameSetting" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="statusSetting" Type="nvarchar" MaxLength="10" />
+    <Property Name="contentSetting" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="createdateSetting" Type="date" Nullable="false" />
+    <Property Name="idEmployee" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="studytoolsInformation">
+    <Key>
+      <PropertyRef Name="sttInformation" />
+    </Key>
+    <Property Name="sttInformation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idStudyTool" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="origin" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="distributor" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="typecontent" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="idSupplier" />
+    </Key>
+    <Property Name="idSupplier" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nameSupplier" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="addressSupplier" Type="nvarchar" MaxLength="400" Nullable="false" />
+    <Property Name="emailSupplier" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="phoneNumberSupplier" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="statusSupplier" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="website" Type="nvarchar" MaxLength="100" />
+    <Property Name="fax" Type="nvarchar" MaxLength="30" />
+    <Property Name="masothue" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="bookStoreManagementModelStoreContainer">
+    <EntitySet Name="account" EntityType="Self.account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bill" EntityType="Self.bill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bookInformation" EntityType="Self.bookInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="checkItems" EntityType="Self.checkItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="custommer" EntityType="Self.custommer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="importBill" EntityType="Self.importBill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="item" EntityType="Self.item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="khachtrahang" EntityType="Self.khachtrahang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mail" EntityType="Self.mail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profitSummary" EntityType="Self.profitSummary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sellBill" EntityType="Self.sellBill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sentmail" EntityType="Self.sentmail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="setting" EntityType="Self.setting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="studytoolsInformation" EntityType="Self.studytoolsInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="supplier" EntityType="Self.supplier" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

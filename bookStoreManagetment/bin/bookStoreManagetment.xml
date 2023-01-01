@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>bookStoreManagetment</name>
+    </assembly>
+    <members>
+        <member name="T:bookStoreManagetment.BarcodeScanner">
+            <summary>
+            Interaction logic for BarcodeScanner.xaml
+            </summary>
+            <summary>
+            BarcodeScanner
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.BarcodeScanner.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.CheckItemsWindow">
+            <summary>
+            Interaction logic for CheckItemsWindow.xaml
+            </summary>
+            <summary>
+            CheckItemsWindow
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.CheckItemsWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.InhoaDon">
+            <summary>
+            Interaction logic for InhoaDon.xaml
+            </summary>
+            <summary>
+            InhoaDon
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.InhoaDon.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.LoginWindow">
+            <summary>
+            Interaction logic for LoginWindow.xaml
+            </summary>
+            <summary>
+            LoginWindow
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.LoginWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.Nhacungcap">
+            <summary>
+            Interaction logic for Nhacungcap.xaml
+            </summary>
+            <summary>
+            Nhacungcap
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.Nhacungcap.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.AddSupplier">
+            <summary>
+            Interaction logic for AddSupplier.xaml
+            </summary>
+            <summary>
+            AddSupplier
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.AddSupplier.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.CaiDatChungUC">
+            <summary>
+            Interaction logic for CaiDatChungUC.xaml
+            </summary>
+            <summary>
+            CaiDatChungUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.CaiDatChungUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.CheckItemsUC">
+            <summary>
+            Interaction logic for CheckItemsUC.xaml
+            </summary>
+            <summary>
+            CheckItemsUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.CheckItemsUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.DashBoardUC">
+            <summary>
+            Interaction logic for DashBoardUC.xaml
+            </summary>
+            <summary>
+            DashBoardUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.DashBoardUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.DSHoaDonUC">
+            <summary>
+            Interaction logic for DSHoaDonUC.xaml
+            </summary>
+            <summary>
+            DSHoaDonUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.DSHoaDonUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.DSKhachHangUCxaml">
+            <summary>
+            Interaction logic for DSKhachHangUCxaml.xaml
+            </summary>
+            <summary>
+            DSKhachHangUCxaml
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.DSKhachHangUCxaml.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.DSNhanVien">
+            <summary>
+            Interaction logic for DSNhanVien.xaml
+            </summary>
+            <summary>
+            DSNhanVien
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.DSNhanVien.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.ImportGoodsUC">
+            <summary>
+            Interaction logic for ImportGoodsUC.xaml
+            </summary>
+            <summary>
+            ImportGoodsUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.ImportGoodsUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.ListofProductUC">
+            <summary>
+            Interaction logic for ListofProductUC.xaml
+            </summary>
+            <summary>
+            ListofProductUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.ListofProductUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.DSThuChiUC">
+            <summary>
+            Interaction logic for DSThuChiUC.xaml
+            </summary>
+            <summary>
+            DSThuChiUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.DSThuChiUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.PhieuChiUC">
+            <summary>
+            Interaction logic for PhieuChiUC.xaml
+            </summary>
+            <summary>
+            PhieuChiUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.PhieuChiUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.PhieuThuUC">
+            <summary>
+            Interaction logic for PhieuThuUC.xaml
+            </summary>
+            <summary>
+            PhieuThuUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.PhieuThuUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.EditSupplier">
+            <summary>
+            Interaction logic for EditSupplier.xaml
+            </summary>
+            <summary>
+            EditSupplier
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.EditSupplier.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.KhachtrahangUC">
+            <summary>
+            Interaction logic for KhachtrahangUC.xaml
+            </summary>
+            <summary>
+            KhachtrahangUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.KhachtrahangUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.mailUC">
+            <summary>
+            Interaction logic for mailUC.xaml
+            </summary>
+            <summary>
+            mailUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.mailUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.TestUC">
+            <summary>
+            Interaction logic for TestUC.xaml
+            </summary>
+            <summary>
+            TestUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.TestUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.NhacungcapUC">
+            <summary>
+            Interaction logic for NhacungcapUC.xaml
+            </summary>
+            <summary>
+            NhacungcapUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.NhacungcapUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.UserControls.ThongTinNhanVienUC">
+            <summary>
+            Interaction logic for ThongTinNhanVienUC.xaml
+            </summary>
+            <summary>
+            ThongTinNhanVienUC
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.UserControls.ThongTinNhanVienUC.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:bookStoreManagetment.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:bookStoreManagetment.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:bookStoreManagetment.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:bookStoreManagetment.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:GridViewExport.Behaviors.DataGridExport">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>
